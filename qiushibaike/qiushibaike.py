@@ -16,7 +16,7 @@ def save_json(item):
 
     item_json = json.dumps(item, ensure_ascii=False, sort_keys=True, indent=2, separators=(',',':'))
     f.write(item_json +'\n')
-    #f.close()
+    f.close()
 
 
 def code(data):
@@ -62,4 +62,4 @@ for page_number in pages:
         item[0]['content'] = content
         #item = [{'number':m, 'name':name, 'content':content}]
         save_json(item[0])
-f.close()
+        
